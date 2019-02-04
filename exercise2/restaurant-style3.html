@@ -6,70 +6,101 @@
     <meta charset="utf-8" />
     <link rel="icon" href="#" />
 
-
-<!-- CSS -->
 <style>
+* {
+  box-sizing: border-box;
+}
+
+img {mix-blend-mode: multiply;}
+
+body {
+  margin: 0px;
+  padding-left: 00px;
+  padding-right: 00px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: yellow; color:black;
+}
+
+  h2 {font-family: Arial Narrow;
+    font-size: 20px;}
+
+/* The grid: Three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 50px;
+  text-align: center;
+  font-size: 40px;
+  cursor: pointer;
+  color: white;
+}
+
+.containerTab {
+  padding: 50px;
+  color: black;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Closable button inside the container tab */
+.closebtn {
+  float: right;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
 
 
-
-  body {
- 
-    font-family: Arial Narrow, Helvetica Condensed, sans-serif;
-    font-size: 20px; 
-    margin: 0px;
-    padding: 0px;}
-
-  table {font-size: 20px}
-
-  h2 {font-family: Arial Bold, Arial, sans-serif;
-    font-size: 18px; text-transform: uppercase;}
-
-  img {mix-blend-mode: multiply;}
-
-  .small-text{font-size: 16px}
-
-    .info {margin: 0px; padding: 0px; text-transform: uppercase; font-family: Arial; font-style: regular;}
 
   .grid-container {
     display: grid;
       grid-template-columns: 33% 34% 33%;
       padding: 0px;
-      border-left-width: 0;
-      border-top-width: 0;
     }
   .grid-item {
       padding: 10px;
-      border: .5px solid rgba(1, 1, 1, 1);
-      font-size: 14px;
+      font-size: 18px;
       text-align: left;
   }
+
+  .info {padding-left: 50px; padding-top: 50px; font-family: arial narrow;}
+
 </style>
-
 </head>
-
-<!-- HTML -->
- 
-  <body>
-
-<!-- GRID -->
+<body>
 
 
 
-<!-- GRID SQUARE 1-->
+<!-- Three columns -->
+<div class="row">
+  <div class="column" onclick="openTab('b1');" style="background:yellow; color:black;">
+    ABOUT
+  </div>
+  <div class="column" onclick="openTab('b2');" style="background:black; color:white">
+    MENU
+  </div>
+  <div class="column" onclick="openTab('b3');" style="background:#f0f0f0; color:black;">
+    CONTACT
+  </div>
+</div>
+
+<!-- Full-width columns: (hidden by default) -->
+
+
+<div id="b2" class="containerTab" style="display:none;background:black; color:white">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
 
 <div class="grid-container">
-  <div class="grid-item"><span class="info"> YAMASAKI TERIYAKI </span></div>
-
-
-  <div class="grid-item"><span class="info">Sushi Teriyaki & B.B.Q. House</span></div>
-
-
-  <div class="grid-item"><span class="info">www.yamasakiteriyaki.com</span>
-  </div>
-
   <div class="grid-item">
-    
-    <h2>House Salad / Soup</h2>
+
+
+  <p><h2>House Salad / Soup</h2>
 
     <table>
     <tr>
@@ -77,14 +108,7 @@
     <td>5.99 <br> 5.99 <br> 6.99 <br> 7.99 <br> 3.99 <br> 5.99 <br> 5.99 <br> 2.00 <br> 2.00</td>
     </tr>
     </table>
- 
-
-
-
-  </div>
-
- <!-- GRID SQUARE 2 -->
- <div class="grid-item">
+    <br>
 
 
   <h2>Appetizers</h2>
@@ -95,14 +119,14 @@
     <td>7.99 <br> 5.99 <br> 5.99 <br> 5.99 <br> 4.50 <br> 3.99 <br> 4.99 <br> 2.00 </td>
     </tr>
     </table>
-
+    <br>
   </div>
 
 
- <!-- GRID SQUARE 3 -->
+ <!-- GRID 2 -->
  <div class="grid-item">
-    
-    <h2>Teriyaki Entree </h2> 
+
+  <h2>Teriyaki Entree </h2> 
 
   <p class="small-text">
      Served with rice, fried rice or lo mein <br>
@@ -124,20 +148,8 @@
     </table> 
     
     <p class="small-text">
-    <img src="../assets/smallplus.png"> With one soup + one ginger salad <br> 
-    <br> <strong>Add Chicken $2 (4 oz) <br> 
-    Add Beef $3 (4 oz)</strong> </p> <br>
-
-
-  </div>  
-
-
-
-<!-- GRID SQUARE 4 -->
-
-  <div class="grid-item">
-    
-
+    <small>Add Chicken $2 (4 oz) <br> 
+    Add Beef $3 (4 oz)</small> </p> <br>
 
     <h2>B.B.Q. Plates </h2> 
      <p class="small-text">Served with white rice or veg. fried rice </p> 
@@ -157,21 +169,16 @@
 
   <p style="font-style: italic;font-size: 14px;margin-top: -5px;">Chicken steak + short ribs </p>
   
+<br>
+  
  
-    <br>
-    <br>
-    <br>
-
-  <p style="font-style: bold; font-size: 14px;  text-align: left;">Food allergies? </b> <br> If you have a food allergy, please speak to the owner, <br>manager, chef, or your server.
-
   </div>
 
-<!-- GRID SQUARE 5 -->
 
-
-  <div class="grid-item">
-
-
+ <!-- GRID COL 3 -->
+ <div class="grid-item">
+    
+  
 
 <h2>Teriyaki Bento Box </h2> 
 
@@ -184,21 +191,9 @@
     </tr>
     </table> 
     <br>
-    <br>
+ 
 
-
-
-
-  
-
-
-  </div>
-
-<!-- GRID SQUARE 5 -->
-
-  <div class="grid-item">
-    
-<h2>Beverages </h2>
+ <h2>Beverages </h2>
   <table>
     <tr>
     <td>Bottle Soda <br> Can Soda <br> Orange Juice <br> Bottle Water
@@ -206,15 +201,62 @@
     </tr>
     </table> 
 
+  </div>  
+
+  </p>
+</div>
+</div>
+
+<div id="b3" class="containerTab" style="display:none;background:#f0f0f0; color:black; height: 100%">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+ 
+  <h2>Food allergies?</h2> 
+<p>If you have a food allergy, please speak to the owner, manager, chef, or your server.</p>
+    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+</div>
+
+
+<script>
+function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+</script>
+
+
+<div class="info">
+
+<h1>YAMASAKI TERIYAKI</h1>
+<h2>Sushi Teriyaki & B.B.Q. House</h2>
+
+<p style="font-size: 16px; font-family: arial;">
+9 Dixwell Ave., New Haven, CT 06511 <br>
+203-780-8891 <br><br>
+<strong>Business Hours:</strong> <br>
+Mon-Thur: 11AM-10PM <br>
+Fri-Sat: 11AM-10:30PM <br>
+Sun: 12PM-9PM <br>
+</p><br> <br>
+
+
+ <br>www.yamasakiteriyaki.com</p> <br>
+
+</div>
+
+</body>
+</html> 
 
 
 
-  </div> 
 
 
 
 
-  </body>
 
 
-</html>
+
+
