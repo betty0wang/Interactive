@@ -1,34 +1,73 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Yamasaki Japan</title>
+    <title>Yamasaki Teriyaki</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta charset="utf-8" />
     <link rel="icon" href="#" />
-  </head>
+
+
+<!-- CSS -->
+<style>
+
+	body {
+ 
+		font-family: Arial Narrow, Helvetica Condensed, sans-serif;
+		font-size: 20px; 
+		margin: 0px;
+		padding: 0px;}
+
+	table {font-size: 20px}
+
+	h2 {font-family: Arial Bold, Arial, sans-serif;
+		font-size: 18px; text-transform: uppercase;}
+
+	img {mix-blend-mode: multiply;}
+
+	.small-text{font-size: 16px}
+
+  	.info {margin: 0px; padding: 0px; text-transform: uppercase;}
+
+	.grid-container {
+ 		display: grid;
+  		grid-template-columns: 33% 34% 33%;
+  		padding: 0px;
+  		border-left-width: 0;
+   		 border-top-width: 0;
+  	}
+	.grid-item {
+  		padding: 10px;
+  		border: .5px solid rgba(1, 1, 1, 1);
+  		font-size: 14px;
+  		text-align: left;
+	}
+</style>
+
+</head>
+
+<!-- HTML -->
+ 
   <body>
 
-   <img src="../assets/restaurantlogo.png">
-   <h1>YAMASAKI JAPAN</h1>
-   <h2>Sushi Teriyaki & B.B.Q. House</h2>
-   <p>
-   Tel: 203-780-8891 | 203-780-8478 <br>
-   Fax: 475-227-3644 <br> 
-   9 Dixwell Ave., New Haven, CT 06511 <br>
+<!-- GRID -->
 
-   <em>www.yamasakiteriyaki.com</em>
-   <br>
-   <br>
 
-   <strong>Business Hours:</strong> <br>
 
-   Mon-Thur: 11AM-10PM <br>
-   Fri-Sat: 11AM-10:30PM <br>
-   Sun: 12PM-9PM <br>
-   </p>
+<!-- GRID SQUARE 1-->
 
-   <img src="../assets/border.png">
-   <h3>House Salad / Soup</h3>
+<div class="grid-container">
+  <div class="grid-item"><span class="info"> YAMASAKI TERIYAKI </span></div>
+
+
+  <div class="grid-item"><span class="info">Sushi Teriyaki & B.B.Q. House</span></div>
+
+
+  <div class="grid-item"><span class="info">www.yamasakiteriyaki.com</span>
+	</div>
+
+  <div class="grid-item">
+  	
+  	<h2>House Salad / Soup</h2>
 
     <table>
     <tr>
@@ -36,10 +75,17 @@
     <td>5.99 <br> 5.99 <br> 6.99 <br> 7.99 <br> 3.99 <br> 5.99 <br> 5.99 <br> 2.00 <br> 2.00</td>
     </tr>
     </table>
-    <br>
-    <img src="../assets/houseceasar.png">
+ 
 
-    <h3>Appetizers</h3>
+
+
+  </div>
+
+ <!-- GRID SQUARE 2 -->
+ <div class="grid-item">
+
+
+	<h2>Appetizers</h2>
     <table>
     <tr>
     <td>Beef Negimaki <em> (6 pcs) </em> <br> Chicken Katsu <br> Shrimp Tempura <br> Vegetable Tempura <br> Chicken Wing <em> (6 pcs) </em> 
@@ -47,18 +93,25 @@
     <td>7.99 <br> 5.99 <br> 5.99 <br> 5.99 <br> 4.50 <br> 3.99 <br> 4.99 <br> 2.00 </td>
     </tr>
     </table>
-    <br>
+
+  </div>
 
 
-    <h3>Teriyaki Entree </h3> <small>
-     Served with rice, fried rice or lo mein </small> <br>
-    <img src="../assets/smallplus.png"> <small> With one soup + one ginger salad 
-    <strong> <br> Add Chicken $2 (4 oz) <br> Add Beef $3 (4 oz) </strong> </small>
-     <br> 
-     <br>
+ <!-- GRID SQUARE 3 -->
+ <div class="grid-item">
+  	
+  	<h2>Teriyaki Entree </h2> 
+
+	<p class="small-text">
+     Served with rice, fried rice or lo mein <br>
     <table>
     <tr>
-    <td>Teriyaki Chicken <br> Teriyaki Beef <br> Teriyaki Shrimp <br> Teriyaki Salmon <br> Teriyaki Chicken & Shrimp <br> Teriyaki Beef & Shrimp <br> </td>
+    <td>Teriyaki Chicken <br> 
+    	Teriyaki Beef <br> 
+    	Teriyaki Shrimp <br> 
+    	Teriyaki Salmon <br> 
+    	Teriyaki Chicken & Shrimp <br> 
+    	Teriyaki Beef & Shrimp <br> </td>
     <td> 6.99  <img src="../assets/plus.png"> 8.50 
       <br> 7.50 <img src="../assets/plus.png"> 8.99 
       <br> 7.50 <img src="../assets/plus.png"> 8.99 
@@ -67,36 +120,83 @@
       <br> 7.50 <img src="../assets/plus.png"> 8.99
     </tr>
     </table> 
-  <img src="../assets/teriyaki.png"> <br>
+    
+    <p class="small-text">
+    <img src="../assets/smallplus.png"> With one soup + one ginger salad <br> 
+    <br> <strong>Add Chicken $2 (4 oz) <br> 
+    Add Beef $3 (4 oz)</strong> </p> <br>
 
-<h3>B.B.Q. Plates </h3> <small>
-     Served with white rice or veg. fried rice </small> <br> <br>
+
+  </div>  
+
+
+
+<!-- GRID SQUARE 4 -->
+
+  <div class="grid-item">
+  	
+
+
+  	<h2>B.B.Q. Plates </h2> 
+     <p class="small-text">Served with white rice or veg. fried rice </p> 
   <table>
     <tr>
     <td>B.B.Q Chicken <br> 
       B.B.Q Steak <br> 
       B.B.Q Short Ribs <br> 
-      B.B.Q Combo <em> <small> Chicken steak + short ribs </small> </em> <br> </td>
+      B.B.Q Combo <br> 
+  </td>
     <td> 6.99  <img src="../assets/plus.png"> 8.50 
       <br> 7.50 <img src="../assets/plus.png"> 8.99 
       <br> 8.99 <img src="../assets/plus.png"> 9.99 
       <br> 8.99 <img src="../assets/plus.png"> 9.99
     </tr>
     </table> 
-  <img src="../assets/bbq.png"> <br>
 
-<h3>Teriyaki Bento Box </h3> <small>
-     Served with gyoza, California roll & salad </small> <br> <br>
+  <p style="font-style: italic;font-size: 14px;margin-top: -5px;">Chicken steak + short ribs </p>
+  
+ 
+    <br>
+    <br>
+    <br>
+
+	<p style="font-style: bold; font-size: 14px;  text-align: left;">Food allergies? </b> <br> If you have a food allergy, please speak to the owner, <br>manager, chef, or your server.
+
+  </div>
+
+<!-- GRID SQUARE 5 -->
+
+
+  <div class="grid-item">
+
+
+
+<h2>Teriyaki Bento Box </h2> 
+
+<p class="small-text"> Served with gyoza, California roll & salad </p> 
+
   <table>
     <tr>
     <td>Chicken Bento <br> Shrimp Bento <br> Beef Bento
     <td>7.99 <br> 8.50 <br> 8.50
     </tr>
     </table> 
-  <img src="../assets/bento.png"> <br>
+    <br>
+    <br>
 
 
-  <h3>Beverages </h3>
+
+
+  
+
+
+  </div>
+
+<!-- GRID SQUARE 5 -->
+
+  <div class="grid-item">
+  	
+<h2>Beverages </h2>
   <table>
     <tr>
     <td>Bottle Soda <br> Can Soda <br> Orange Juice <br> Bottle Water
@@ -104,10 +204,15 @@
     </tr>
     </table> 
 
-<br>
-<br><b>Food allergies? </b><br> If you have a food allergy, please speak to the owner, manager, chef, or your server. <br><br>
 
 
-<img src="../assets/border.png">
+
+  </div> 
+
+
+
+
   </body>
+
+
 </html>
