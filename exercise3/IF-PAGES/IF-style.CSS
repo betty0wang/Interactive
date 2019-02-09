@@ -1,0 +1,56 @@
+
+body {font-family:Arial; background-color: black }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 15% auto 15%;
+  background-color: black;
+  padding: 13px;
+}
+
+.grid-item {
+  background-color: black;
+  color: white;
+  border: 1px; border-color: white;
+  padding:40px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  font-size: 14px;
+  text-align: left;
+  line-height: 18px;
+}
+
+#id { 
+  position: absolute
+   }
+
+
+
+
+/* unvisited link */
+a:link {
+  color: thistle;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: thistle;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: black;
+  background-color: white;
+  font-family: arialnarrow;
+}
+
+/* selected link */
+a:active {
+  color: lightsalmon;
+  font-family: arialnarrow;
+}
+
+
+
