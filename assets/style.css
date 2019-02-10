@@ -41,6 +41,12 @@ body {
 
 }
 
+/* unvisited link */
+a:link {
+  color: thistle;
+  text-decoration: none;
+}
+
 /* visited link */
 a:visited {
   color: lightsalmon;
@@ -55,6 +61,8 @@ a:hover {
 a:active {
   color: red;
 }
+
+
 
 ol {  
   list-style-position: outside; }
