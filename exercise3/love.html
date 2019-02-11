@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+
+body {
+  margin: 0px;
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+/*  border: 1px solid #c3c3c3;*/
+  display: flex;
+}
+
+#main div:nth-of-type(1) {flex-grow: 1;}
+#main div:nth-of-type(2) {flex-grow: 1;}
+#main div:nth-of-type(3) {flex-grow: 1;}
+
+#myBlueDiv {
+  -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+  animation: mymove 5s infinite;
+}
+
+.first {
+  font-family: times; 
+  font-weight: normal;
+  min-width: 20vw;
+  max-width: 22vw;
+  padding: 0px 0px 20px 20px;
+  margin-top: 15px;
+}
+
+.second {
+  font-family: arial;
+  max-width: 50vw;
+  padding: 0px 0px 20px 20px;
+  margin-top: 15px;
+}
+
+.third {
+  min-width: 15vw;
+  max-width: 16vw;
+  padding: 0px 0px 20px 20px;
+  margin-top: 15px;
+
+}
+
+h1 {
+  font-family: times;
+  font-weight: normal;
+  font-size: 6vh;
+  line-height: 1em;
+  margin-top: 0px;
+  margin-bottom: 0px; 
+  position: fixed;
+  bottom: 10px;
+}
+
+h2 {
+  font-family: arial;
+  font-weight: normal;
+  font-size: 3vh;
+  margin-top: 0px;
+  margin-bottom: 10px; 
+
+}
+
+h4 {
+  font-family: times;
+  font-size: 4vh;
+  letter-spacing: .5px;
+  font-weight: normal;
+  font-style: italic;
+  margin-top: 0px;
+  position: fixed;
+  max-width: 15vw;
+}
+
+#prompt {
+  font-family: times;
+  font-size: 2vh;
+  letter-spacing: .4px;
+  font-weight: normal;
+  margin-top: 0px;
+  position: fixed;
+  max-width: 20vw;
+  line-height: 1.2em;
+}
+
+.emphasis {
+  font-style: italic;
+  font-family: arial;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+  50% {flex-grow: 8;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+  50% {flex-grow: 8;}
+}
+</style>
+</head>
+
+
+<body>
+
+<!-- <h1>Animation of flex-grow</h1> -->
+
+<!-- <p>Gradually change the flex-grow property of the "blue DIV" from 1 to 8, and back to 1:<p> -->
+
+<div id="main">
+  <div style="background-color:black; color:white;">
+    <div class="first">
+
+    <h1>Writing III</h1>
+
+    <div id="prompt">
+      As Fei Liu writes, the like/heart button is a flattening affordance of giving affirmation and love. The text-editor provides a much more expressive input. But even people who can't communicate well because of language barriers can express love through actions, like cooking food. 
+
+    <br><br>
+
+      Can we create other "love inputs" that might allow us to "reach across the chasm of a seamless signal"? What is expressing "real" love or affirmation about? Is it about effort, thoughtfulness, generosity, something else? What might a thoughtful or generous interface feel or behave like?</div>
+    </div>
+  </div>
+
+
+  <div style="background-color:snow;" id="myBlueDiv">
+    <div class="second">
+
+      <h1>:</h1>
+
+        <h2>Musings on <span class="emphasis">A Drop of Love In The Cloud</span></h2><br>
+
+        Liu’s dichotomy between motherly <span class="emphasis">(unconditional)</span> and fatherly <span class="emphasis">(conditional)</span> love is interesting and I’m curious: if the digital patriarchy that shatters the illusion of always-existing, unconditional validation relies on such a facade to force our constant participation, <span class="underline">in which world did the matriarchy actually exist?</span>
+
+        <br><br>
+
+        To move from realms, they need to first exist—or is it the moving from simulacra to “reality”?
+
+        <br><br>
+
+        I love <span class="emphasis">The longer the lingering, the deeper the sink.</span>
+
+        <br><br>
+
+        Machines don’t have to know how to love in order to simulate it. But—do humans? Does anyone? And in the end does it matter, this ongoing debate over whether machines can be conscious—isn’t the emulation of consciousness enough? Aren’t we, day by day, performing what we understand to be real, and true about the experience of being human? 
+
+        <br><br>
+
+        I wonder if “do not overestimate how much love you deserve” could be more effective framed as, “do not underestimate how much love you need”—aren’t we all, always, underestimating how much love we deserve, and thereby overestimating how much more love we need, and have yet to receive?
+
+        <br>
+        <br>
+        <span style="font-size: 80px; font-family: times;">*</span>
+        <br>
+        <h2>A Response</h2>
+        <br>
+
+        I am struck by and smitten with the term “love input”; what a wholesome way of describing what was once a well-intentioned and meaningful facet of social connection in the digital sphere—one that turned cold, mechanical, empty. 
+
+        <br><br>
+        <span class="emphasis">Vectorized, commoditized, infinitely scalable, replicable, abstracted</span> love. 
+        <span class="emphasis">Increasing in ease, in quantity</span> love. <span class="emphasis">Diminishing in value</span> love.
+        <br><br>
+
+        In what other ways can we imagine the giving and receiving of what was already hard to convey, intangible, and complicated in the physical world? Is there no other way to embody all of the nuance—than the reductive, repetitive motions of selecting a prescribed response, and scrolling past? How can we pour more of us into interactions that seem so limiting? Limiting in character limit, limiting in agency. Every second you spend thinking has an opportunity cost of another image seen, another life consumed, another image liked, another life loved. What other ways can we organize relationships on screen? The exchange of emotion? A give and take process. In what ways do the options we have now seem so lacking, so futile, that we must consider alternatives to the way our interactions now no longer seem to hold so much weight?
+        <br><br>
+        How can we design a world with a different gravity?
+        <br><br>
+        At this point I only have more questions instead of answers.
+        <br><br>
+        Maybe the only thing I can say with any conviction right now is that providing a limited selection of reactions might make for an abundance of quick, impulsive responses—an immediate indication of engagement—but attempts to capture too much in very little results in the erasure of a certain nature of human emotion: complexity. The reality that you can hold contradictory feelings at once. 
+        <br><br>
+        But in terms of solutions, I have only curiosity: how do we invite effort, thoughtfulness, generosity, but also honesty, and compassion, and intimacy, and vulnerability into a space devoid of touch, of warmth, of eye contact? Are there ways to simulate safety? Are there ways to design aura into interfaces that can be so easily left, so easily exited—the abandonment of a room that only existed for you, and will always wait for your return? <br><br> <br><br>
+
+
+</div>
+  </div>
+
+
+  <div style="background-color:black; color:#F0f0f0;">
+    <div class="third">
+
+      <h1>Love</h1>
+
+      <h4>Vectorized, commoditized, infinitely scalable, replicable, abstracted love.<br><br>
+Increasing in ease, <br>in quantity love. <br><br>Diminishing in value love.</h4></div>
+</div></div>
+
+
+
+</body>
+</html>
