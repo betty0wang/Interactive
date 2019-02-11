@@ -54,7 +54,7 @@ body {
 .col4 {
   flex: .5;
   margin-top: 0px;
-  max-width: 100%
+  font-size: 3vw;
 }
 
 
