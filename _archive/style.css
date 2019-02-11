@@ -1,0 +1,68 @@
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+
+.flex {
+  display: flex;
+}
+
+.info {
+  flex: 1;
+  margin: 10px 30px 0px 60px;
+  text-align: center;
+  width: 100%
+
+}
+
+.image {
+  flex: 1;
+  margin-top: 35px;
+  max-width: 100%
+}
+
+img {
+	max-width: 100%;
+	max-height: 90%;
+}
+
+h1, h2 {
+  font-family: arial black;
+}
+
+body { 
+  font-family: arial;
+
+}
+
+.falling {
+ pointer-events: none;
+
+}
+
+/* unvisited link */
+a:link {
+  color: thistle;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: lightsalmon;
+}
+
+/* mouse over link */
+a:hover {
+  color: orangered;
+}
+
+/* selected link */
+a:active {
+  color: red;
+}
+
+
+
+ol {  
+  list-style-position: outside; }
