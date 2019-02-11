@@ -29,7 +29,7 @@ body {
   color: lightsalmon;
 }
 
-.about {
+.col1 {
   flex: .5;
   margin-top: 0px;
   margin-left: 20px;
@@ -39,19 +39,19 @@ body {
   font-family: arial;
 }
 
-.exercises{
+.col2 {
   flex: 1;
   margin-top: 0px;
   font-size: 3vw;
 }
 
-.writing{
+.col3 {
   flex: 1;
   margin-top: 0px;
   font-size: 3vw;
 }
 
-.final{
+.col4 {
   flex: .5;
   margin-top: 0px;
   max-width: 100%
