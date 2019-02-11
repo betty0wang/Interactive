@@ -24,6 +24,27 @@ body {font-family:Arial; background-color: black }
   position: absolute
    }
 
+.footer {
+  color: white;
+  font-family: arial narrow;
+  position: fixed;
+  bottom: 0;
+  text-align: left;
+  margin-left: 5px;
+  padding: 0px;
+}
+
+.footer a:hover {
+  color: lightsalmon;
+}
+
+.footer a:active {
+  color: white;
+}
+
+.footer a:visited {
+  color: snow;
+}
 
 
 
@@ -52,5 +73,8 @@ a:active {
   font-family: arialnarrow;
 }
 
+h1 {
+font-weight: normal;
+}
 
 
