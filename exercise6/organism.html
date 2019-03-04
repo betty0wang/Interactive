@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>helmut lang</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="https://img.icons8.com/android/24/000000/hearts.png"/>
+
+
+
+
+	<style>
+
+	body {
+		background: snow;
+	}
+
+	#line {
+		width:150vw;
+		height: 1.2px;
+		background: gray;
+		position: absolute;
+		left: -25vw;
+		bottom: 20%;
+		box-shadow: inset 0px 0px 40px 40px gray;
+		opacity: .5;
+	}
+
+	.canvas {
+		/* if you want to change the background of your canvas, do it here */
+		background: snow;
+		width: 990px;
+		height: 680px;
+		margin: 70px auto;
+		position: relative;
+	}
+	/* this is where you can style the objects in your still life */
+		
+/*	#bagside1 {
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 0 600px 200px;
+		border-color: transparent transparent snow transparent;
+		position: absolute;
+		bottom: 0;
+		right: 1%;
+		z-index: 980;
+		opacity: .5;*/
+	
+/* background: #e7e9ec;
+  */
+
+
+  #bagtop1 {
+    width: 487px;
+    height: 103px;
+    background: #e7e9ec;
+    border-radius: 50%;
+    position: absolute;
+    top: -6%;
+    left: 9%;
+    z-index: 999;
+  }
+
+#bagtop2 {
+    width: 368px;
+    height: 77px;
+    background: snow;
+    border-radius: 50%;
+    position: absolute;
+    top: -6%;
+    left: 58%;
+    z-index: 999;
+  }
+
+
+	#fold1 {
+		width: 304px;
+    	height: 71px;
+    	left: 60%;
+    	top: 69%;
+    	position: absolute;
+    	background: rgb(97, 97, 97);
+    	box-shadow: inset 0 30px 27px #00000094;
+    	-moz-border-radius: 100px 0px;
+    	-webkit-border-radius: 100px 0px;
+    	border-radius: 95px 0px;
+    	transform: skew(-20deg);
+    	transform: rotate(-12deg);
+    	z-index: 999;
+    	opacity: .2;
+	}
+
+	#fold2 {
+		width: 374px;
+    	height: 27px;
+    	left: 56%;
+    	top: 61%;
+    	position: absolute;
+    	background: snow;
+    	-moz-border-radius: 100px 0px;
+    	-webkit-border-radius: 100px 0px;
+    	border-radius: 95px 0px;
+    	transform: skew(-20deg);
+    	transform: rotate(-12deg);
+    	z-index: 999;
+    	opacity: .8;
+	}
+
+	#fold3 {
+		width: 374px;
+    	height: 12px;
+    	left: 25%;
+    	top: 31%;
+    	position: absolute;
+    	background: snow;
+    	-moz-border-radius: 100px 0px;
+    	-webkit-border-radius: 100px 0px;
+    	border-radius: 48px 0px;
+    	transform: skew(-20deg);
+    	transform: rotate(-12deg);
+    	z-index: 999;
+    	opacity: 0.8;
+	}
+
+	#fold4 {
+		width: 374px;
+    	height: 19px;
+    	left: 16%;
+    	top: 38%;
+    	position: absolute;
+    	background: snow;
+    	-moz-border-radius: 100px 0px;
+    	-webkit-border-radius: 100px 0px;
+    	border-radius: 48px 0px;
+    	transform: skew(-20deg);
+    	transform: rotate(-12deg);
+    	z-index: 999;
+    	opacity: 0.8;
+	}
+
+	#fold5 {
+		width: 403px;
+    	height: 71px;
+    	left: 11%;
+    	top: 43%;
+    	position: absolute;
+    	background: rgb(97, 97, 97);
+    	box-shadow: inset 0 30px 27px #00000094;
+    	-moz-border-radius: 100px 0px;
+    	-webkit-border-radius: 100px 0px;
+   	 	border-radius: 95px 0px;
+    	transform: skew(-20deg);
+    	transform: rotate(-12deg);
+    	z-index: 999;
+    	opacity: .2;
+	}
+
+
+	#ground {
+		bottom: 0;
+		background-color: black;
+		width: 100%;
+		height: 200px;
+	}
+
+	#bagbody {
+		border-bottom: 680px solid #e7e9ec;
+		border-left: 90px solid transparent;
+		border-right: 60px solid transparent;
+		z-index: 1;
+		}
+
+  #allsoil {
+    z-index: 4;
+  }
+
+	#soil {
+      width: 990px;
+   		height: 90px; /* as the half of the width */
+    	/*background-color: #45310e;*/
+    	background-image: radial-gradient(white .1vw, #45310e .1vw);
+		  background-size: 7vw 5vw;
+		  box-shadow: inset 0 -18px 41px #0000005c;
+    	border-top-left-radius: 130px;  /* 100px of height + 10px of border */
+    	border-top-right-radius: 90px; /* 100px of height + 10px of border */
+    	border-bottom: 0;
+    	position: absolute;
+    	bottom: 3%;
+    	left: 0.2%;
+    	transform: rotate(2deg);
+    	z-index: 3;
+	}
+
+	#soil2 {
+		width: 600px;
+        height: 200px;
+    /*    background-color: #45310e;*/
+    	background-image: radial-gradient(white .2vw, #45310e .2vw);
+		background-size: 7vw 5vw;
+		box-shadow: inset 0 -18px 41px #0000005c;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 0.2%;
+        z-index: 8;
+        left: 6%;
+        transform: rotate(4deg);
+    }
+
+    #soil3 {
+		width: 400px;
+        height: 100px;
+        /*background-color: #45310e;*/
+        background-image: radial-gradient(white .1vw, #45310e .1vw);
+		background-size: 7vw 5vw;
+		box-shadow: inset 0 -18px 41px #0000005c;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 7%;
+        z-index: 4;
+        left: 53%;
+        transform: rotate(8deg);
+    }
+
+/*<--! GROUND -->*/
+
+    #soil4 {
+		width: 990px;
+		height: 40px;
+		position: absolute;
+		/*background: #45310e;*/
+		background-image: radial-gradient(white .1vw, #45310e .1vw);
+		background-size: 7vw 5vw;
+		box-shadow: inset 0 -18px 41px #0000005c;
+		bottom: 0;
+		left: 0;
+		z-index: 6;
+  }
+
+
+/*<--! STEM -->*/
+
+	#stem {
+		height: 420px;
+		width: 100px;
+		position: absolute;
+		background: transparent;
+		left:48%;
+		top:20%;
+	}
+
+	#stem1 {
+		height: 320px;
+		width: 10px;
+   	 	background: rgb(185, 220, 46);
+   	 	box-shadow: inset 0 3px 7px #0000007d;
+		position: absolute;
+		z-index: 7;
+		transform: rotate(-6deg);
+	}
+
+	#stem2 {
+		height: 120px;
+		width: 10px;
+   	 	background: rgb(185, 220, 46);
+   	 	box-shadow: inset 0 3px 7px #0000007d;
+		position: absolute;
+		z-index: 8;
+		top: 74%;
+		left: 11%;
+		transform: rotate(5deg);
+	}
+
+	#leaves {
+		height: 300px;
+		width: 400px;
+		background-color: transparent; 
+	/*	opacity: .5;*/
+		z-index: 22;
+		position: absolute;
+		left: 31%;
+		top: 50%;
+		z-index: 19;
+	}
+
+
+	#leaf1 {
+		width: 90px; 
+		height: 90px;
+		left: 43%;
+		position: absolute;
+  		background: rgb(111, 158, 18);
+   	 	box-shadow: inset 0 -22px 27px #00000094;
+  		-moz-border-radius: 100px 0px;
+  		-webkit-border-radius: 100px 0px;
+  		border-radius: 100px 0px;
+  		transform: skew(-20deg);
+  		transform: rotate(-20deg);
+	}
+
+	#leaf2 {
+		width: 30px;
+    	height: 90px;
+    	left: 50%;
+    	top: 8%;
+		position: absolute;
+   	 	background: rgb(158, 210, 58);
+   	 	box-shadow: inset 0 -3px 20px #00000042;
+  		-moz-border-radius: 100px 0px;
+  		-webkit-border-radius: 100px 0px;
+  		border-radius: 100px 0px;
+  		transform: rotate(35deg);
+	}
+
+	#leaf3 {
+		width: 80px;
+    	height: 80px;
+   		left: 28%;
+   		top: 23%;
+    	position: absolute;
+   	 	background: rgb(158, 210, 58);
+   	 	box-shadow: inset 0 -18px 41px #0000005c;
+    	-moz-border-radius: 100px 0px;
+    	-webkit-border-radius: 100px 0px;
+    	border-radius: 100px 40px 10px 40px;
+    	transform: rotate(-29deg);
+    	/*transform: skew(10deg);*/
+	}
+
+
+	#leaf4 {
+		width: 80px;
+    	height: 80px;
+   		 left: 21%;
+   		 top:38%;
+    	position: absolute;
+   	 	background: rgb(111, 158, 18);
+   	 	box-shadow: inset 0 -10px 23px #00000094;
+    	-moz-border-radius: 100px 0px;
+    	-webkit-border-radius: 100px 0px;
+    	border-radius: 70px 70px 10px 70px;
+    	transform: rotate(70deg);
+    	z-index: 10;
+    	/*transform: skew(10deg);*/
+	}
+
+	#leaf5 {
+		width: 110px;
+   	 	height: 21px;
+    	left: -7%;
+    	top: 36%;
+    	position: absolute;
+    	background: rgb(186, 255, 49);
+    	box-shadow: inset 0 -11px 27px #00000094;
+    	-moz-border-radius: 100px 0px;
+    	-webkit-border-radius: 100px 0px;
+    	border-radius: 95px 0px;
+    	transform: skew(-20deg);
+    	transform: rotate(-12deg);
+    	z-index: 20;
+}
+
+	#leaf6{
+   	 	 width: 50px;
+    	height: 70px;
+    	left: 53%;
+    	top: 44%;
+    	position: absolute;
+    	background: rgb(86, 119, 5);
+    	box-shadow: inset 0 -22px 38px #00000073;
+    	-moz-border-radius: 100px 0px;
+    	-webkit-border-radius: 100px 0px;
+    	border-radius: 100px 0px;
+    	transform: skew(-20deg);
+    	transform: rotate(-36deg);
+    	z-index: 20;
+	}
+
+	#leaf7 {
+		    width: 100px;
+   	 	height: 100px;
+   	 	left: 63%;
+    	top: 36%;
+    	position: absolute;
+    	background: rgb(176, 191, 54);
+    	box-shadow: inset 0 39px 41px #00000059;
+    	-moz-border-radius: 100px 0px;
+    	-webkit-border-radius: 100px 0px;
+    	border-radius: 51px 94px 0px 90px;
+    	transform: rotate(-95deg);
+    	z-index: 3;
+    }
+
+
+    #leaf8 {
+		width: 80px;
+    	height: 75px;
+    	left: 45%;
+    	bottom: 19%;
+    	position: absolute;
+    	background: rgb(108, 140, 45);
+    	box-shadow: inset 0 -18px 27px #00000094;
+    	-moz-border-radius: 100px 0px;
+    	-webkit-border-radius: 100px 0px;
+    	border-radius: 89px 0px;
+    	transform: skew(-20deg);
+    	transform: rotate(21deg);
+    	z-index: 20;
+	}
+
+	#leafstem1 {
+		height: 4px;
+		width: 40px;
+   	 	background: rgb(158, 210, 58);
+   	 	box-shadow: inset 0 -3px 20px #00000042;
+		position: absolute;
+		z-index: 2;
+		left:18%;
+		top:38%;
+		transform: rotate(15deg);
+	}
+
+	#leafstem2 {
+		height: 40px;
+		width: 4px;
+   	 	background: rgb(158, 210, 58);
+   	 	box-shadow: inset 0 -3px 20px #00000042;
+		position: absolute;
+		z-index: 2;
+		left:42%;
+		top:55%;
+		transform: rotate(-30deg);
+	}
+
+	#rose {
+		height: 100px;
+		width: 130px;
+		background-color: transparent;
+		/*z-index: 20;*/
+		position: absolute;
+		left: 41%;
+		top: 20%;
+		z-index: 22;
+		transform: rotate(-2deg);
+	}
+
+
+
+  #rose > div {
+    transition: background-color 4s;
+  }
+
+  #leaves > div {
+    transition: background-color 4s;
+  }
+
+
+   #stem > div {
+    transition: background-color 4s;
+  }
+
+  .helmut {
+    transition: color 6s;
+  }
+
+  .lang {
+    transition: color 6s;
+  }
+
+	#petal1 {
+    	position: absolute;
+    	height: 64px;
+    	width: 102px;
+    	padding: 0px;
+    	background: rgb(210, 75, 0);
+    	box-shadow: inset 0 -14px 20px #00000042;
+    	border-radius: 150px; 
+    	bottom: 40%; 
+    	left:30%;
+    	transform: rotate(10deg) skew(33deg); 
+    	-webkit-transform: rotate(-50deg) skew(33deg); 
+    	z-index: 5;
+    }
+
+	#petal2 {
+		width: 100px; 
+		height: 50px;
+		left: 50%;
+		top: 15%;
+		position: absolute;
+   	 	background: rgba(230, 21, 0);
+   	 	box-shadow: inset 0 -3px 20px #00000042;
+  		-moz-border-radius: 100px 0px;
+  		-webkit-border-radius: 100px 0px;
+  		border-radius: 100px 0px;
+  		transform: skew(-20deg);
+  		transform: rotate(-20deg);
+	}
+
+	#petal3 {
+   	 	width: 50px;
+   		height: 90px;
+    	left: -10%;
+    	top: 4%;
+    	position: absolute;
+    	background: rgb(214, 0, 0);
+    	box-shadow: inset 0 -22px 38px #00000042;
+  		-moz-border-radius: 100px 0px;
+  		-webkit-border-radius: 100px 0px;
+  		border-radius: 100px 0px;
+  		transform: skew(-20deg);
+  		transform: rotate(-70deg);
+  		z-index: 20;
+
+	}
+
+	#petal-falling {
+   	 	width: 50px;
+   		height: 90px;
+    	left: -10%;
+    	top: 4%;
+    	position: absolute;
+    	background: rgb(214, 0, 0);
+    	box-shadow: inset 0 -22px 38px #00000042;
+  		-moz-border-radius: 100px 0px;
+  		-webkit-border-radius: 100px 0px;
+  		border-radius: 100px 0px;
+  		transform: skew(-20deg);
+  		transform: rotate(-70deg);
+  		z-index: 22;
+  		animation-name: falling;
+  		animation-duration: 5s;
+  		animation-fill-mode: forwards;
+	}
+
+	@-webkit-keyframes falling {
+		0% {
+			top: 4%;
+		}
+		100% {
+			top: 400%; left: -60%;
+			transform: rotate(-130deg);
+		}
+	}
+
+	#petal4 {
+		width: 20px;
+    	height: 100px;
+    	left: 1%;
+    	top: -28%;
+    	position: absolute;
+    	background: rgb(255, 143, 109);
+   	 	box-shadow: inset 0 -3px 20px #00000042;
+  		-moz-border-radius: 100px 0px;
+  		-webkit-border-radius: 100px 0px;
+  		border-radius: 100px 0px;
+  		transform: skew(-20deg);
+  		transform: rotate(97deg);
+  		z-index: 20;
+	}
+
+	#petal5 {
+		width: 20px;
+    	height: 100px;
+    	left: 16%;
+    	top: -17%;
+    	position: absolute;
+    	background: rgb(255, 98, 90);
+    	box-shadow: inset 0 4px 20px #00000042;
+    	-moz-border-radius: 100px 0px;
+    	-webkit-border-radius: 100px 0px;
+    	border-radius: 100px 0px;
+    	transform: skew(-20deg);
+    	transform: rotate(-80deg);
+    	z-index: 24;
+	}
+
+	#petal6 {
+   	 	 width: 50px;
+    	height: 90px;
+    	left: 2%;
+    	top: -32%;
+    	position: absolute;
+    	background: rgb(214, 0, 0);
+    	box-shadow: inset 0 25px 38px #00000042;
+    	-moz-border-radius: 100px 0px;
+    	-webkit-border-radius: 100px 0px;
+    	border-radius: 100px 0px;
+    	transform: skew(-20deg);
+    	transform: rotate(-90deg);
+    	z-index: 7;
+	}
+
+	#petal7 {
+		width: 80px;
+    	height: 80px;
+   		left: 24%;
+   		top: 23%;
+    	position: absolute;
+   	 	background: rgb(210, 58, 58);
+   	 	box-shadow: inset 0 -18px 41px #0000005c;
+    	-moz-border-radius: 100px 0px;
+    	-webkit-border-radius: 100px 0px;
+    	border-radius: 100px 40px 10px 40px;
+    	transform: rotate(-130deg);
+    	z-index: 24;
+    	/*transform: skew(10deg);*/
+	}
+
+	#petal8 {
+		width: 20px;
+    	height: 100px;
+    	left: 84%;
+    	top: -52%;
+    	position: absolute;
+    	background: rgb(255, 123, 117);
+    	box-shadow: inset 0 4px 20px #00000094;
+    	-moz-border-radius: 100px 0px;
+    	-webkit-border-radius: 100px 0px;
+    	border-radius: 100px 0px;
+    	transform: skew(-20deg);
+    	transform: rotate(80deg);
+    	z-index: 24;
+	}
+
+	#petal9 {
+		width: 20px;
+    	height: 80px;
+   	 	left: 69%;
+    	top: -5%;
+    	position: absolute;
+    	background: rgb(255, 123, 117);
+    	box-shadow: inset 0 4px 20px #00000094;
+    	-moz-border-radius: 100px 0px;
+    	-webkit-border-radius: 100px 0px;
+    	border-radius: 100px 0px;
+    	transform: skew(-20deg);
+    	transform: rotate(139deg);
+    	z-index: 40;
+	}
+
+	#petal10 {
+		width: 34px;
+    	height: 90px;
+    	left: 49%;
+    	top: -50%;
+    	position: absolute;
+    	background: rgb(251, 95, 88);
+    	box-shadow: inset 0 -8px 28px #000000b8;
+    	-moz-border-radius: 100px 0px;
+    	-webkit-border-radius: 100px 0px;
+    	border-radius: 100px 0px;
+    	transform: skew(-20deg);
+    	transform: rotate(82deg);
+    	z-index: 4;
+	}
+
+	#petal11 {
+		width: 47px;
+    	height: 96px;
+    	left: -10%;
+    	top: -50%;
+    	position: absolute;
+    	background: rgb(255, 107, 101);
+    	box-shadow: inset 0 -8px 28px #000000b8;
+    	-moz-border-radius: 100px 0px;
+    	-webkit-border-radius: 100px 0px;
+    	border-radius: 100px 0px;
+    	transform: skew(-20deg);
+    	transform: rotate(277deg);
+    	z-index: 2;
+	}
+
+
+	#petal12 {
+		width: 26px;
+   		height: 105px;
+    	left: 64%;
+    	top: -66%;
+    	position: absolute;
+    	background: rgb(162, 22, 15);
+    	box-shadow: inset 0 4px 20px #00000094;
+    	-moz-border-radius: 100px 0px;
+    	-webkit-border-radius: 100px 0px;
+    	border-radius: 100px 0px;
+    	transform: skew(-20deg);
+    	transform: rotate(72deg);
+    	z-index: 1;
+	}
+
+	#petal13 {
+		width: 56px;
+   	 	height: 53px;
+    	left: 39%;
+    	top: 96%;
+    	position: absolute;
+    	background: rgb(176, 191, 54);
+    	box-shadow: inset 0 9px 41px #0000009e;
+    	-moz-border-radius: 100px 0px;
+    	-webkit-border-radius: 100px 0px;
+    	border-radius: 37px 44px 0px 44px;
+    	transform: rotate(32deg);
+    	z-index: 24;
+    }
+
+
+
+	#petal14 {
+		width: 50px;
+   	 	height: 59px;
+    	left: 5%;
+    	top: 82%;
+   	 	position: absolute;
+    	background: rgb(111, 158, 18);
+    	box-shadow: inset 0 18px 27px #00000094;
+    	-moz-border-radius: 100px 0px;
+    	-webkit-border-radius: 100px 0px;
+    	border-radius: 90px 0px;
+    	transform: skew(-20deg);
+    	transform: rotate(24deg);
+	}
+
+	#petal15 {
+		width: 27px;
+    	height: 104px;
+    	left: 36%;
+    	top: -80%;
+    	position: absolute;
+    	background: rgb(255, 128, 122);
+    	box-shadow: inset 0 -8px 28px #000000b8;
+    	-moz-border-radius: 100px 0px;
+    	-webkit-border-radius: 100px 0px;
+    	border-radius: 100px 0px;
+    	transform: skew(-20deg);
+   	 	transform: rotate(-109deg);
+    	z-index: -6;
+}
+
+
+	.helmut {
+		color: #272727;
+		font-size: 60px;
+		z-index: 900;
+		font-family: "HelveticaNeueCondensed", "HelveticaNeue-Condensed", "Helvetica Neue Condensed", "HelveticaNeueRomanCondensed", "HelveticaNeue-Roman-Condensed", "Helvetica Neue Roman Condensed","HelveticaNeue-CondensedBold";
+		letter-spacing: 1.4px;
+		position: absolute;
+		left: 31%;
+		top: 50%;
+		transform: rotate(-3deg);
+	}
+
+  a {
+    text-decoration: none;
+    color: #272727;
+  }
+
+  a:hover {
+    -webkit-stroke-width: 5.3px;
+      -webkit-stroke-color: #FFFFFF;
+      -webkit-fill-color: #FFFFFF;
+      text-shadow: 1px 0px 15px yellow;
+  }
+
+	.helmut.two {
+		font-size: 50px;
+		-moz-transform: scale(-1, 1);
+		-webkit-transform: scale(-1, 1);
+		-o-transform: scale(-1, 1);
+		-ms-transform: scale(-1, 1);
+		transform: scale(-1, 1);
+		opacity: .5;
+		z-index: 2;
+		position: absolute;
+		left: 49%;
+		top: 44.3%;
+	}
+
+
+	.lang {
+		color: #272727;
+		font-size: 60px;
+		z-index: 200;
+		font-family: "HelveticaNeueCondensed", "HelveticaNeue-Condensed", "Helvetica Neue Condensed", "HelveticaNeueRomanCondensed", "HelveticaNeue-Roman-Condensed", "Helvetica Neue Roman Condensed","HelveticaNeue-CondensedBold";
+		letter-spacing: 1.4px;
+		position: absolute;
+		left: 53%;
+		top: 47%;
+		transform: rotate(-10deg);
+	}
+
+	.lang.two {
+		font-size: 50px;
+		-moz-transform: scale(-1, 1);
+		-webkit-transform: scale(-1, 1);
+		-o-transform: scale(-1, 1);
+		-ms-transform: scale(-1, 1);
+		transform: scale(-1, 1);
+		opacity: .5;
+		z-index: 2;
+		position: absolute;
+		left: 36%;
+		top: 44.3%;
+	}
+
+
+  #button {
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 5000;
+  position: absolute;
+  top: 2vw;
+  right: 2vw;
+  margin: 0px;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+#button:hover {
+  background-color: black;
+  color: white;
+}
+
+	</style>
+
+</head>
+
+<body>
+
+
+
+<div class="ground">
+
+  <div id="button"></div>
+
+
+		<!-- this starts the canvas div. do not delete this! -->
+    <div class="canvas">
+
+
+<div id="line"></div>
+
+
+
+    	
+    	
+			<!-- below is where you put your objects in your still life -->
+    	<div id="bagtop1"></div>
+      <div id="bagtop2"></div>
+      <div id="bagtop3"></div>
+
+
+      <div id="fold1"></div>
+    	<div id="fold2"></div>
+    	<div id="fold3"></div>
+    	<div id="fold4"></div>
+    	<div id="fold5"></div>
+
+    	<div id="bagbody">
+			
+			<div id="bagside1"></div>
+
+    		
+      <div id="allsoil">
+    		<div id="soil"><div class="soildots"></div></div>
+    		<div id="soil2"><div class="soildots"></div></div>
+    		<div id="soil3"><div class="soildots"></div></div>
+    		<div id="soil4"><div class="soildots"></div></div>
+      </div>
+
+    	</div>
+
+    	<div id="stem">
+    		<div id="stem1"></div>
+    		<div id="stem2"></div>
+    	</div>
+
+    	<div id="leaves">
+    		<div id="leaf1"></div>
+    		<div id="leaf2"></div>
+    		<div id="leaf3"></div>
+    		<div id="leaf4"></div>
+    		<div id="leaf5"></div>
+    		<div id="leaf6"></div>
+    		<div id="leaf7"></div>
+    		<div id="leaf8"></div>
+    		<div id="leafstem1"></div>
+    		<div id="leafstem2"></div>
+    	</div>
+
+    	<div id="rose">
+    		<div id="petal1"></div>
+    		<div id="petal2"></div>
+    		<div id="petal3"></div>
+    		<div id="petal-falling"></div>
+    		<div id="petal4"></div>
+    		<div id="petal5"></div>
+    		<div id="petal6"></div>
+    		<div id="petal7"></div>
+    		<div id="petal8"></div>
+    		<div id="petal9"></div>
+    		<div id="petal10"></div>
+    		<div id="petal11"></div>
+    		<div id="petal12"></div>
+    		<div id="petal13"></div>
+    		<div id="petal14"></div>
+    		<div id="petal15"></div>
+    	</div>
+
+    
+
+
+    	<a href="https://i.pinimg.com/originals/1e/82/5c/1e825c9bf86fe1d06ed216684d8fb8fd.jpg">
+        <div class="helmut">HELMUT</div>
+    	<div class="lang">LANG</div></a>
+
+    <div class="helmut two">HELMUT</div>
+		<div class="lang two">LANG</div>
+		
+    	<div id="bag"></div>
+
+    	
+
+		<!-- this ends the canvas div. do not delete this! -->
+    </div>
+
+</div>
+
+<!-- JAVASCRIPT!!!!!!!!!!! -->
+
+ <script src="jquery.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+  var stop = true;
+
+
+
+$('#button').click(function(){
+    if (stop == true) {
+     $('body').css('background-color', 'black');
+     $('.canvas').css('background-color', 'black');
+     $('#bagtop2').css('background-color', 'black');
+     $('#button').css('background-color', 'snow');
+
+     setInterval(function() {
+      $('#rose > div').css('background-color', 'black');
+      $('#stem > div').css('background-color', 'black');
+      $('#leaves > div').css('background-color', 'black'); 
+      $('#allsoil > div').css('background-color', 'black');
+      $('.helmut').css('color', 'red');  
+      $('.lang').css('color', 'red');  
+    }, 500); 
+
+     // $('#status').css('background-color', 'green');
+     // $('#pigeon').show();
+     stop = false;
+    }
+    else {
+    $('body').css('background-color', 'snow');
+     $('.canvas').css('background-color', 'snow');
+     $('#bagtop2').css('background-color', 'snow');
+     $('#button').css('background-color', 'snow')
+      // $('#status').html('STOP');
+      // $('#status').css('background-color', 'red');
+      // $('#pigeon').fadeOut();
+      stop = true;
+    }
+
+console.log("Hello World");
+
+
+
+  // });
+  });
+  });
+
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
