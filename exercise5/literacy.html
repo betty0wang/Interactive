@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.typekit.net/fnr1omy.css">
+<style>
+
+body {
+  margin: 0;
+  background-image: url("sky.png");
+}
+
+p {
+  font-family: freight-text-pro, serif;
+  font-size: 20px;
+  margin: 40px 0;
+  line-height: 1.2em;
+}
+
+.container {
+  height: 100%;
+}
+
+.collapsible {
+  font-family: Arial;
+  background-image: url("sky.png");
+  color: white;
+  cursor: pointer;
+  padding: 20px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  /*background: transparent;*/
+  text-align: center;
+}
+
+/*.one {
+  background-color: yellow;
+}
+
+.two {
+  background-color: red;
+}
+
+.three {
+  background-color: green;
+}*/
+
+.active, .collapsible:hover {
+  /*background-color: black;*/
+  border: 1px solid white;
+}
+
+.active {
+  color: black;
+}
+
+.content {
+  padding: 0 30vw;
+  max-height: 0;
+  overflow: auto;
+  transition: max-height 0.2s ease-out;
+  background-color: white;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+<button class="collapsible" style="font-family: arial; text-transform: uppercase;">Writing 5: Literacy</button>
+<div class="content">
+  <p>What’s your relationship to literacy and reading like? What was it like as a child? What is it like now? Do you feel it’s changed over the course of your lifetime? What does a meaningful experience with literature feel like to you? Is literacy important? Describe any specific design affordances that help your experience in reading. Try describing one in print (physical books) and one in digital (e-readers). Is "interactivity" important to literacy and reading? Also, in an ideal world, what might the future of literacy be like? 
+ <br><br>
+  Science fiction writer Octavia Butler wondered, "What is the likelihood of a future in which reading is no longer necessary for the majority of the people? I don't much like the look of that future, but I wonder if when computers, for instance, can be addressed verbally, can be spoken to, whether it will still be necessary for people to be able to read and write."</p>
+</div>
+<button class="collapsible" style="font-family: arial">RESPONSE</button>
+<div class="content">
+  <p>As a young girl, books were worlds I found solace in—a removal, temporary but all-consuming. I read voraciously to fit myself in kingdoms that weren’t mine. I sobbed reading A Bridge to Terabithia like it was my own friendship and ending to grieve. I learned grief then, for the first time. In other books learned fear, and terror, and comfort, and safety.
+  <br><br>
+Soon I learned I could be rewarded for my love of reading—and it turned this into a skill and a process, rather than the building of and living in alternative lives. When you learn there is something to be gained—in any form of currency—from something you did for pleasure, something you did entirely for yourself, it loses some kind of magic. I started skimming, started skipping pages entirely. Filled out book report sheets to claim pizza rewards, to jump levels in reading programs. To reach my arm into the treasure chest of my local library and pull out toys I would later discard just as easily as I had won them—perhaps because I knew they were empty signifiers, things I didn’t deserve at all. I started to skip the reading part altogether, and learned just enough to get by if anyone asked. 
+  <br><br>
+At some point I really internalized this method as the act of reading itself: a measuring of absorption of information, and the ability to pretend you were familiar with something you’ve hardly touched at all. Literacy, then, became far more a facade of participation than anything else; I somehow worked through all of AP Lit & Lang without finishing a single book (I didn’t consider actually reading 1984 until maybe 10 years later, and to this day still haven’t actually read it). Worlds of fantasy collapsed into some kind of metric system, and then later would shape-shift into something equally quantitative and equally performative: social capital. Literacy was cool, it was edgy, it proved that you were not only an intellectual, but the right kind of intellectual. And somewhere along the line, amidst all this, I learned that being well-versed in a certain kind of theory, in a certain type of literacy, was also a marker of whiteness. And not just any kind of whiteness. The very specific leftist, elitist, ivory tower academic whiteness. Did it remove me from my humble beginnings? From my immigrant parents? From my english-as-second language childhood? Did each Verso purchase remove me one degree farther from an identity I spent a lifetime pushing away? Burying far within myself? 
+  <br><br>
+I am re-learning the love for reading now. And I am doing so first and foremost with histories and narratives I want to surrender myself to in all of their devastation and heartbreak, stories of women, of people of color. I am reading a lot of both critical race theory and fiction—Ornamentalism, Pachinko, Sensational Flesh. And I am re-learning what it means to read for entirely myself. </p>
+</div>
+</div>
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+</body>
+</html>
